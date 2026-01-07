@@ -1,0 +1,684 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    padding: 20px 0;
+    margin: 12px auto auto;
+}
+
+.logo img {
+    width: 230px;
+    height: auto;
+}
+
+.menu ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu ul li {
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+.menu ul li:hover {
+    transform: scale(1.1);
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #2195f1;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 15px;
+    transition: background-color 0.2s ease-in;
+}
+
+.menu ul li a:hover {
+    background-color: #4ca144;
+}
+
+/*========================== banner ==============================*/
+
+.banner .container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    padding: 0 15px;
+    margin: 30px auto;
+}
+
+.banner .container .presentation {
+    height: 100%;
+    padding: 35px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    line-height: 40px;
+}
+
+.container .presentation span {
+    font-size: 42px;
+    color: #2195f1;
+    font-weight: 550;
+}
+
+.container .presentation .presentation-1 {
+    font-size: 40px;
+    color: #204188;
+    font-weight: 600;
+}
+
+.container .presentation .presentation-2 {
+    font-size: 22px;
+    color: #204188;
+}
+
+.container .presentation .presentation-img {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .presentation a {
+    text-decoration: none;
+    border-radius: 999px;
+    background-color: #2195f1;
+    color: white;
+    padding: 5px 10px;
+    width: 115px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container .presentation a:hover {
+    background-color: #4ca144;
+}
+
+
+/*========================== redirect ==============================*/
+.redirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 22px;
+}
+
+.redirect div {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.redirect .info {
+    background-color: #2195f1;
+    color: #f1f1f1;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.map-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    line-height: 1.4;
+    margin-top: 15px;
+}
+
+.map-service img {
+    width: 150px;
+    height: 150px;
+}
+
+.map-service p:nth-child(2) {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.map-service p:nth-child(3) {
+    font-size: 20px;
+}
+
+.redirect-btn div {
+    display: inline;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid #2195f1;
+    margin: 20px;
+    color: #2195f1;
+    font-size: 17px;
+    transition: background-color, color .2s ease-in-out;
+}
+
+.redirect-btn div:hover {
+    border-color: #2195f1;
+    background-color: #2195f1;
+    color: #f1f1f1;
+}
+
+.redirect-btn div a {
+    text-decoration: none;
+    color: #2195f1;
+    transition: background-color, color 0.2s ease-in-out;
+}
+
+.redirect-btn div:hover a {
+    color: #f1f1f1;
+}
+
+.redirect-btn div:nth-child(2) {
+    border-color: #2195f1;
+    background-color: #2195f1;
+    color: #f1f1f1;
+}
+
+.redirect-btn div:nth-child(2) a {
+    color: #f1f1f1;
+}
+
+/*========================== show service ==============================*/
+.show-services {
+    border-top: 2px solid #2195f1;
+    border-bottom: 2px solid #2195f1;
+    padding: 22px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.show-services .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+}
+
+.show-services .function h2 {
+    font-size: 40px;
+    color: #2195f1;
+    margin: 20px 0;
+    position: relative;
+    font-weight: bold;
+}
+
+.show-services .function h2::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+
+.show-services .function p {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.show-services .function ul {
+    line-height: 30px;
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.show-services .function ul li:nth-child(1):first-letter {
+    color: #2195f1;
+}
+
+.show-services .function ul li:nth-child(2):first-letter {
+    color: #EE6352;
+}
+
+.show-services .function ul li:nth-child(3):first-letter {
+    color: #4ca144;
+}
+
+.show-services .btn-func {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.show-services .btn-func a {
+    text-decoration: none;
+    color: #f6aa0a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: black;
+    transition: background-color, color .2s ease-in-out;
+}
+
+.show-services .img-func img {
+    height: 320px;
+    position: absolute;
+    left: 60%;
+    top: 3%;
+}
+
+/*-------------------------- offer ----------------------*/
+.offer {
+    display: flex;
+    background: #2195f1;
+    padding: 20px 0;
+}
+
+.offer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+}
+
+.offer .offer-list {
+    width: 40%;
+}
+
+.offer .offer-list h2 {
+    font-size: 40px;
+    color: #f1f1f1;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.offer .offer-list p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #f1f1f1;
+    line-height: 2;
+    text-align: justify;
+    width: 300px;
+}
+
+.offer .offer-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+}
+
+.offer .offer-card-list .offer-card {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    padding: 8px;
+}
+
+.offer-card h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: #EE6352;
+    font-weight: bold;
+}
+
+.offer-card p {
+    text-align: center;
+    line-height: 25px;
+}
+
+.offer .offer-list img {
+    height: 300px;
+}
+
+/*========================== accreditation ==============================*/
+
+.accreditation {
+    padding: 40px 0;
+}
+
+.accreditation .certifications h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #2195f1;
+    position: relative;
+    margin: 20px 0 50px;
+    font-weight: bold;
+}
+
+.accreditation .certifications h2::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 41%;
+}
+
+.certifications ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.certifications ul li {
+    transition: transform 0.2s;
+}
+
+.certifications ul li:hover {
+    transform: scale(1.2);
+}
+
+.certifications ul li img {
+    width: 110px;
+}
+
+/*========================== footer ==============================*/
+footer  {
+    background: #204188;
+    color: white;
+    padding: 40px 0;
+}
+
+footer .footer-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-container div {
+    padding: 20px;
+
+}
+
+.footer-container div h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.footer-container div a {
+    background: #2195f1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color, color .2s ease-in-out;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.footer-container div p {
+    line-height: 2;
+    font-size: 16px;
+}
+
+/*-------------------------- formulaire ----------------------*/
+
+.register-form {
+    margin-bottom: 30px;
+}
+
+.register-form .title-form {
+    text-align: center;
+    line-height: 1.3;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.title-form h1 {
+    font-size: 42px;
+    color: #204188;
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.title-form p {
+    font-size: 30px;
+    background-color: #2195f1;
+    color: #f1f1f1;
+    padding: 30px;
+    width: 100%;
+}
+
+.form-section {
+    width: 70%;
+    margin: 30px auto 0;
+    border: 3px solid #204188;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    background-color: #204188;
+    padding: 20px;
+    flex-basis: 80%;
+}
+
+.form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f1f1f1;
+    position: relative;
+    padding-left: 20px;
+}
+
+.form h2::before {
+    content: "";
+    background-color: white;
+    height: 98%;
+    width: 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 10px;
+}
+
+.form form {
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.form .form-group {
+    margin: 5px 0;
+    position: relative;
+}
+
+.form .form-group label {
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.form input {
+    display: block;
+    width: 97%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    outline: none;
+    border: 1px solid #2195f1;
+    border-radius: 5px;
+}
+
+.form input:focus {
+    border-color: #EE6352;
+}
+
+.form button {
+    background-color: #2195f1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    transition: background-color .2s ease-in-out;
+    letter-spacing: 1px;
+}
+
+.form button:hover {
+    background-color: #f3ae06;
+}
+
+.form-presentation {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.form-presentation img {
+    width: 480px;
+}
+
+.form-presentation p {
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.form-presentation p:nth-child(2) {
+    font-size: 17px;
+    color: #204188;
+}
+
+.form-presentation p:nth-child(3) {
+    font-size: 20px;
+    color: #204188;
+    font-weight: 600;
+}
+
+.form-presentation p:nth-child(4) {
+    font-size: 19px;
+    color: #204188;
+}
+
+/*========================== service page ==============================*/
+.banner .serv .presentation {
+    flex-basis: 48%;
+}
+
+.banner .serv span {
+    color: #204188;
+}
+
+.banner .serv .presentation-1 {
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.two-p {
+    background-color: #2195f1;
+}
+
+.two-p div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.two-p p {
+    text-align: center;
+    border: 1px solid #2195f1;
+    font-size: 30px;
+    color: #f1f1f1;
+    padding: 30px;
+    flex-basis: 50%;
+}
+
+.two-p p:last-child {
+    background-color: #204188;
+}
+
+.services-list h2 {
+    color: #204188;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+.service-container {
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-container .card-service {
+    height: 60vh;
+    border-radius: 5px;
+    color: #f1f1f1;
+    padding: 40px;
+    line-height: 28px;
+    overflow: hidden;
+    flex-basis: 30%;
+}
+
+.service-container .card-service h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.service-container .card-service p {
+    overflow: auto;
+    font-size: 17px;
+    text-align: justify;
+}
+
+/* Animation d'apparition progressive banniere */
+.animate-item {
+    opacity: 0; /* Invisible au départ */
+    transform: translateY(30px); /* Légèrement descendu */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Classe ajoutée par JavaScript pour déclencher l'animation */
+.animate-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optionnel : petit effet au survol du bouton (sans changer le design) */
+.presentation a:hover {
+    background-color: #1e88e5;
+    transition: background-color 0.3s ease;
+}
+
+/* Animation au scroll - état initial */
+.animate-item1 {
+    opacity: 0;
+    transform: translateY(40px); /* Légèrement plus bas au départ */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+/* État final une fois visible */
+.animate-item1.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

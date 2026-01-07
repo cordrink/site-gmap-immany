@@ -1,0 +1,405 @@
+/*pannel de couleur       EE6352  59CD90  3FA7D6  FAC05E */
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+.social {
+    padding: 10px 0;
+    background: #3FA7D6;
+}
+
+.social .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social .contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+}
+
+.social .bx {
+    font-size: 25px;
+    color: #f1f1f1;
+}
+
+.social .bx:hover {
+    color: wheat;
+}
+
+.social .contact p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #f1f1f1;
+}
+
+.contact p a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.social .social-logo ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    color: #f1f1f1;
+}
+
+/*-------------------------- nav ----------------------*/
+
+.nav {
+    padding: 20px 0;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .container ul {
+    padding: 15px;
+    display: flex;
+    gap: 16px;
+    font-size: 16px;
+}
+.nav .container ul li {
+
+}
+
+.nav  ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nav  ul li:hover a {
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.nav  ul li:nth-child(1) a{
+    background-color: #EE6352;
+    color: #f1f1f1;
+}
+
+/*-------------------------- banner ----------------------*/
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/banner.jpg);
+    background-size: cover;
+    height: 83vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+}
+
+.banner .container .presentation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner .presentation span {
+    color: #EE6352;
+    font-size: 30px;
+    font-weight: 600;
+}
+.banner .presentation .presentation-1 {
+    color: wheat;
+    font-size: 50px;
+    font-weight: bold;
+    width: 40vw;
+}
+
+.banner .presentation .presentation-2 {
+    color: #f1f1f1;
+    font-size: 20px;
+}
+
+.banner .presentation a {
+    text-decoration: none;
+    color: #f1f1f1;
+    border-radius: 5px;
+    background-color: #EE6352;
+    width: 110px;
+    padding: 20px 10px;
+    margin-top: 30px;
+}
+
+.banner .presentation-img img {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    border-radius: 12px;
+    transform: rotate(10deg);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*-------------------------- redirect ----------------------*/
+.redirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 22px;
+}
+
+.redirect div {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.redirect .info {
+    background-color: #3FA7D6;
+    color: #f1f1f1;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.map-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.map-service img {
+    width: 150px;
+    height: 150px;
+}
+
+.map-service p:nth-child(2) {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.map-service p:nth-child(3) {
+    font-size: 20px;
+}
+
+.redirect-btn div {
+    display: inline;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid #3FA7D6;
+    margin: 20px;
+    color: #3FA7D6;
+    font-size: 17px;
+    transition: background-color, color .2s ease-in-out;
+}
+
+.redirect-btn div:hover  {
+    border-color: #EE6352;
+    background-color: #EE6352;
+    color: #f1f1f1;
+}
+
+.redirect-btn div a {
+    text-decoration: none;
+    color: #3FA7D6;
+    transition: background-color, color 0.2s ease-in-out;
+}
+
+.redirect-btn div:hover a {
+    color: #f1f1f1;
+}
+
+/*-------------------------- show service ----------------------*/
+.show-services {
+    border-top: 2px solid #3FA7D6;
+    border-bottom: 2px solid #3FA7D6;
+    padding: 22px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.show-services .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+
+.show-services .function h2 {
+    font-size: 40px;
+    color: #EE6352;
+    margin: 20px 0;
+    position: relative;
+}
+
+.show-services .function h2::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+
+.show-services .function p {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.show-services .function ul {
+    line-height: 30px;
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.show-services .function ul li:first-letter {
+    color: #3FA7D6;
+}
+
+.show-services .btn-func {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.show-services .btn-func a {
+    text-decoration: none;
+    color: #EE6352;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #EE6352;
+    transition: background-color, color .2s ease-in-out;
+}
+
+.show-services .btn-func a:hover {
+    background-color: #EE6352;
+    color: #f1f1f1;
+}
+
+.show-services .img-func img {
+    height: 320px;
+    position: absolute;
+    left: 60%;
+    top: 3%;
+}
+
+/*offer*/
+.offer {
+    display: flex;
+    background: #EE6352;
+    padding: 20px 0;
+}
+
+.offer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.offer .offer-list {
+    width: 40%;
+}
+
+.offer .offer-list h2 {
+    font-size: 40px;
+    color: #f1f1f1;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.offer .offer-list p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #f1f1f1;
+    line-height: 2;
+    text-align: justify;
+}
+
+.offer .offer-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+}
+
+.offer .offer-card-list .offer-card {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    padding: 8px;
+}
+
+.offer-card h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: #EE6352;
+}
+
+.offer-card p {
+    text-align: center;
+    line-height: 25px;
+}
+
+.offer .offer-list img {
+    height: 300px;
+}
+
+.accreditation {
+    padding: 40px 0;
+}
+
+.accreditation .certifications h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #EE6352;
+    margin: 20px 0;
+    position: relative;
+}
+
+.accreditation .certifications h2::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 38%;
+}
+
+.certifications ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.certifications ul li img {
+    width: 110px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.certifications ul li img:hover {
+    filter: grayscale(0%);
+}
