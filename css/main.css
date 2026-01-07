@@ -273,7 +273,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 75%;
+    width: 80%;
     margin: auto;
 }
 
@@ -299,12 +299,12 @@ nav {
 
 .offer .offer-card-list {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 16px;
     justify-content: space-between;
     position: relative;
     top: 50px;
+    margin-left: 15px;
 }
 
 .offer .offer-card-list .offer-card {
@@ -343,8 +343,9 @@ nav {
     font-size: 40px;
     color: #2195f1;
     position: relative;
-    margin: 20px 0 50px;
+    margin: 20px auto 50px;
     font-weight: bold;
+    width: 300px;
 }
 
 .accreditation .certifications h2::after {
@@ -355,7 +356,7 @@ nav {
     background: black;
     position: absolute;
     top: 0;
-    left: 41%;
+    left: 10px;
 }
 
 .certifications ul {
