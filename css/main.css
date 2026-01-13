@@ -381,10 +381,12 @@ nav {
 }
 
 /*========================== footer ==============================*/
-footer  {
+footer {
     background: #204188;
     color: white;
     padding: 40px 0;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
 }
 
 footer .footer-container {
@@ -650,6 +652,167 @@ footer .footer-container div {
     overflow: auto;
     font-size: 17px;
     text-align: justify;
+}
+
+/*========================== prices page ==============================*/
+.header-prices {
+    padding: 35px 0;
+}
+
+.header-prices h1 {
+    font-size: 30px;
+    color: #204188;
+    font-weight: bold;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.header-prices h1 span:nth-child(1) {
+    font-size: 45px;
+}
+
+.header-prices .card-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/zoom_loop.jpeg) center -50px;
+    background-size: cover;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-prices .card-container div {
+    background: #2195f1;
+    color: white;
+    font-weight: bold;
+    height: 150px;
+    width: 150px;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    line-height: 1.3;
+    backdrop-filter: blur(100%);
+}
+
+.price-list {
+    padding: 20px 0;
+}
+
+.price-list h2 {
+    font-size: 20px;
+    color: #204188;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.price-list .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.price-list .card-explain {
+    background-color: #f2fafd;
+    border-radius: 40px;
+    border: 1px solid #2195f1;
+    padding: 40px 20px;
+    text-align: center;
+    width: 240px;
+}
+
+.price-list .cont-1 .card-explain:nth-child(1) {
+    height: 350px;
+}
+
+.price-list .cont-1 .card-explain:nth-child(3) {
+    background-color: #3a4baf;
+}
+
+.price-list .cont-2 .card-explain:nth-child(1) {
+    height: 700px;
+}
+
+.price-list .cont-2 .card-explain:nth-child(3) {
+    height: 360px;
+}
+
+.price-list .card-explain h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #204188;
+    text-transform: uppercase;
+}
+
+.card-explain .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.card-explain .price {
+    color: #2195f1;
+    font-size: 29px;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.card-explain .price span {
+    font-size: 12px;
+    color: grey;
+    position: absolute;
+    top: 0;
+    right: -42%;
+}
+
+.card-explain .price span:first-letter {
+    color: #2195f1;
+}
+
+.card-explain .price::after {
+    content: "";
+    background-color: #2195f1;
+    height: 1px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.card-explain .content div span {
+    margin: 10px 0;
+    display: inline-block;
+    line-height: 1.3;
+}
+
+.card-explain .content div hr {
+    width: 100%;
+    color: rgba(128, 128, 128, 0.3);
+}
+
+.cont-1 .card-explain:nth-child(3) hr,
+.cont-1 .card-explain:nth-child(3) h3 ,
+.cont-1 .card-explain:nth-child(3) span {
+    color: white;
+}
+
+.card-explain .content a {
+    text-decoration: none;
+    color: #f1f1f1;
+    padding: 10px;
+    border-radius: 99px;
+    margin: 5px;
+    font-size: 17px;
 }
 
 /* Animation d'apparition progressive banniere */
