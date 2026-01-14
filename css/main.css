@@ -766,6 +766,17 @@ footer .footer-container div {
     position: relative;
 }
 
+.card-explain .price::after {
+    content: "";
+    background-color: #2195f1;
+    height: 1px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 .card-explain .price span {
     font-size: 12px;
     color: grey;
@@ -778,15 +789,9 @@ footer .footer-container div {
     color: #2195f1;
 }
 
-.card-explain .price::after {
-    content: "";
-    background-color: #2195f1;
-    height: 1px;
-    width: 100%;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.card-explain .access-plus,
+.card-explain .access-plus span:first-letter {
+    color: white;
 }
 
 .card-explain .content div span {
@@ -801,7 +806,7 @@ footer .footer-container div {
 }
 
 .cont-1 .card-explain:nth-child(3) hr,
-.cont-1 .card-explain:nth-child(3) h3 ,
+.cont-1 .card-explain:nth-child(3) h3,
 .cont-1 .card-explain:nth-child(3) span {
     color: white;
 }
