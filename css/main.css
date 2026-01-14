@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'TeX Gyre Adventor';
+    src: url('../asset/font/texgyreadventor-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -725,6 +733,11 @@ footer .footer-container div {
     padding: 40px 20px;
     text-align: center;
     width: 240px;
+    transition: transform .4s ease;
+}
+
+.price-list .card-explain:hover {
+    transform: scale(1.04);
 }
 
 .price-list .cont-1 .card-explain:nth-child(1) {
@@ -764,6 +777,7 @@ footer .footer-container div {
     padding: 10px;
     margin-top: 10px;
     position: relative;
+    font-family: "TeX Gyre Adventor", Arial, Helvetica, sans-serif;
 }
 
 .card-explain .price::after {
@@ -774,7 +788,8 @@ footer .footer-container div {
     display: block;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .card-explain .price span {
@@ -782,7 +797,10 @@ footer .footer-container div {
     color: grey;
     position: absolute;
     top: 0;
-    right: -42%;
+    right: -50%;
+    width: 60px;
+    height: 16px;
+    text-align: left;
 }
 
 .card-explain .price span:first-letter {
