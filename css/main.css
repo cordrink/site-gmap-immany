@@ -1,3 +1,4 @@
+/*========================== Global & Fonts ==============================*/
 @font-face {
     font-family: 'TeX Gyre Adventor';
     src: url('../asset/font/texgyreadventor-regular.otf') format('opentype');
@@ -10,9 +11,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 75%;
+    max-width: 1200px;
     padding: 20px 0;
-    margin: 12px auto auto;
+    margin: 12px auto;
 }
 
 .logo img {
@@ -22,7 +24,7 @@ nav {
 
 .menu ul {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -41,32 +43,37 @@ nav {
     text-decoration: none;
     color: white;
     background-color: #2195f1;
-    padding: 10px 20px;
+    padding: 10px 22px;
     border-radius: 999px;
     font-size: 15px;
-    transition: background-color 0.2s ease-in;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 
 .menu ul li a:hover {
     background-color: #4ca144;
 }
 
-/*========================== banner ==============================*/
+/*========================== Banner ==============================*/
 
 .banner .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 70%;
+    width: 75%;
+    max-width: 1200px;
     padding: 0 15px;
     margin: 30px auto;
 }
 
 .banner .container .presentation {
+    flex: 1;
+    min-width: 300px;
     height: 100%;
     padding: 35px 0;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     line-height: 40px;
 }
 
@@ -74,12 +81,14 @@ nav {
     font-size: 42px;
     color: #2195f1;
     font-weight: 550;
+    line-height: 1.2;
 }
 
 .container .presentation .presentation-1 {
     font-size: 40px;
     color: #204188;
     font-weight: 600;
+    line-height: 1.3;
 }
 
 .container .presentation .presentation-2 {
@@ -87,8 +96,10 @@ nav {
     color: #204188;
 }
 
-.container .presentation .presentation-img {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.container .presentation .presentation-img img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
 .container .presentation a {
@@ -126,7 +137,8 @@ nav {
 .redirect .info {
     background-color: #2195f1;
     color: #f1f1f1;
-    font-size: 25px;
+    font-size: 22px;
+    padding: 15px 0;
     line-height: 40px;
 }
 
@@ -155,13 +167,13 @@ nav {
 
 .redirect-btn div {
     display: inline;
-    padding: 15px 10px;
-    border-radius: 5px;
-    border: 1px solid #2195f1;
+    padding: 15px 15px;
+    border-radius: 8px;
+    border: 2px solid #2195f1;
     margin: 20px;
     color: #2195f1;
     font-size: 17px;
-    transition: background-color, color .2s ease-in-out;
+    transition: background-color, color .3s ease;
 }
 
 .redirect-btn div:hover {
@@ -631,23 +643,26 @@ footer .footer-container div {
 }
 
 .service-container {
-    width: 70%;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    display: grid; /* Utilisation de Grid pour plus de stabilité */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 75%;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
 .service-container .card-service {
     height: 60vh;
-    border-radius: 5px;
+    border-radius: 12px;
     color: #f1f1f1;
     padding: 40px;
     line-height: 28px;
     overflow: hidden;
-    flex-basis: 30%;
+    transition: transform 0.3s ease;
+}
+
+.card-service:hover {
+    transform: translateY(-10px);
 }
 
 .service-container .card-service h3 {
@@ -838,34 +853,51 @@ footer .footer-container div {
     font-size: 17px;
 }
 
+/*========================== Media Queries (Mobile) ==============================*/
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .container .presentation span {
+        font-size: 28px;
+    }
+
+    .show-services .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .show-services .img-func img {
+        position: static; /* Annule le position absolute sur mobile */
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/*========================== Animations ==============================*/
+
 /* Animation d'apparition progressive banniere */
-.animate-item {
+.animate-item, .animate-item1 {
     opacity: 0; /* Invisible au départ */
     transform: translateY(30px); /* Légèrement descendu */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Classe ajoutée par JavaScript pour déclencher l'animation */
-.animate-item.visible {
+.animate-item.visible, .animate-item1.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Optionnel : petit effet au survol du bouton (sans changer le design) */
 .presentation a:hover {
     background-color: #1e88e5;
     transition: background-color 0.3s ease;
-}
-
-/* Animation au scroll - état initial */
-.animate-item1 {
-    opacity: 0;
-    transform: translateY(40px); /* Légèrement plus bas au départ */
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
-
-/* État final une fois visible */
-.animate-item1.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
