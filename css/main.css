@@ -96,9 +96,8 @@ nav {
     color: #204188;
 }
 
-.container .presentation .presentation-img img{
+.container .presentation-img img{
     max-width: 100%;
-    height: auto;
     border-radius: 15px;
 }
 
@@ -858,6 +857,25 @@ footer .footer-container div {
     nav {
         flex-direction: column;
         gap: 20px;
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+        height: 50px; /* qui doit passer a 215px lorsqu'on deroule le menu */
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        padding: 16px;
+        position: relative;
+        z-index: 99;
+        background-color: white;
+    }
+
+    .menu {
+        width: 100%;
+        position: relative;
+        transform: translateY(-150%); /* qui doit passer a 0 lorsqu'on deroule le menu */
     }
 
     .menu ul {
@@ -866,8 +884,46 @@ footer .footer-container div {
         gap: 30px;
     }
 
+    .banner .container .presentation {
+        display: block;
+        text-align: center;
+    }
+
     .container .presentation span {
         font-size: 28px;
+    }
+
+    .container .presentation-img {
+        display: none;
+    }
+
+    .container .presentation a {
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    .map-service {
+        margin: 32px 0;
+    }
+
+    .redirect .info {
+        font-size: 18px;
+    }
+
+    .map-service img {
+        width: 100px;
+        height: auto;
+    }
+
+    .map-service p:nth-child(2) {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+
+    .map-service p:nth-child(3) {
+        font-size: 16px;
+        padding: 0 15px;
+        line-height: 1.1;
     }
 
     .show-services .container {
@@ -875,11 +931,57 @@ footer .footer-container div {
         width: 90%;
     }
 
-    .show-services .img-func img {
-        position: static; /* Annule le position absolute sur mobile */
-        height: auto;
+    .show-services .function h2 {
+        font-size: 34px;
+        margin-left: 8px;
+    }
+
+    .show-services .function p {
+        font-size: 22px;
+
+    }
+    .show-services .btn-func a{
+        font-size: 18px;
+    }
+    .show-services .img-func {
+        display: none;
+    }
+    .offer .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+    }
+    .offer .offer-list {
         width: 100%;
-        margin-top: 20px;
+    }
+    .offer .offer-list p {
+        font-size: 18px;
+        width: 100%;
+    }
+    .offer .offer-card-list {
+        position: static;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .offer .offer-card-list .offer-card {
+        height: 200px;
+        width: 250px;
+        padding: 20px;
+    }
+    .offer-card h3 {
+        font-size: 22px;
+    }
+    .offer-card p {
+        line-height: 1.4;
+        font-size: 16px;
+    }
+    .offer .offer-list img {
+        display: none;
+    }
+    footer .footer-container {
+        flex-direction: column;
+        margin-bottom: 150px;
     }
 }
 
