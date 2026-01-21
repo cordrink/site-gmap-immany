@@ -60,3 +60,38 @@ const observer2 = new IntersectionObserver((entries) => {
 });
 
 items2.forEach(item => observer2.observe(item));
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('toggleCurrency');
+    const btnText = btn.querySelector('span');
+    const amounts = document.querySelectorAll('.amount');
+    const symbols = document.querySelectorAll('.currency-symbol');
+
+    let isEuro = true;
+    const exchangeRate = 1.75; // 1€ = 1.45 CAD
+
+    btn.addEventListener('click', () => {
+        isEuro = !isEuro;
+
+        amounts.forEach(el => {
+            const baseValue = parseFloat(el.getAttribute('data-base-price'));
+
+            if (isEuro) {
+                // Retour à l'Euro
+                el.innerText = baseValue.toLocaleString('fr-FR', { minimumFractionDigits: 2 });
+            } else {
+                // Conversion en CAD
+                const converted = (baseValue * exchangeRate).toFixed(2);
+                el.innerText = converted.replace('.', ',');
+            }
+        });
+
+        // Mise à jour des symboles (€ ou CAD $)
+        symbols.forEach(sym => {
+            sym.innerText = isEuro ? '€' : 'CAD';
+        });
+
+        // Mise à jour du texte du bouton
+        btnText.innerText = isEuro ? 'CAD ($)' : 'Euro (€)';
+    });
+});
