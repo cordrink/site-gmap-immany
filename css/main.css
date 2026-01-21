@@ -444,6 +444,29 @@ footer .footer-container div {
     font-size: 16px;
 }
 
+footer .address {
+    width: 80%;
+    padding: 15px 0;
+    text-align: right;
+    margin: auto;
+    display: flex;
+    justify-content: right;
+}
+
+footer .address div {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
+}
+
+footer .address i {
+    font-size: 24px;
+    color: #EE6352;
+}
+
 /*-------------------------- formulaire ----------------------*/
 
 .register-form {
@@ -478,7 +501,7 @@ footer .footer-container div {
 }
 
 .form-section {
-    width: 70%;
+    width: 80vw;
     margin: 30px auto 0;
     border: 3px solid #204188;
     border-radius: 10px;
@@ -489,7 +512,8 @@ footer .footer-container div {
 .form {
     background-color: #204188;
     padding: 20px;
-    flex-basis: 80%;
+    flex-basis: 52%;
+    height: 100%;
 }
 
 .form h2 {
@@ -552,7 +576,7 @@ footer .footer-container div {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    width: 30%;
+    width: 150px;
     transition: background-color .2s ease-in-out;
     letter-spacing: 1px;
 }
@@ -562,16 +586,11 @@ footer .footer-container div {
 }
 
 .form-presentation {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    text-align: center;
+    flex-basis: 48%;
 }
 
 .form-presentation img {
-    width: 480px;
+    width: 90%;
 }
 
 .form-presentation p {
@@ -690,7 +709,7 @@ footer .footer-container div {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 25px;
+    padding: 10px 0;
 }
 
 .header-prices h1 span:nth-child(1) {
@@ -781,7 +800,7 @@ footer .footer-container div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     gap: 20px;
 }
 
@@ -792,16 +811,17 @@ footer .footer-container div {
     margin-top: 10px;
     position: relative;
     font-family: "TeX Gyre Adventor", Arial, Helvetica, sans-serif;
+    width: 141px;
 }
 
 .card-explain .price::after {
     content: "";
     background-color: #2195f1;
     height: 1px;
-    width: 100%;
+    width: 60%;
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -811,7 +831,7 @@ footer .footer-container div {
     color: grey;
     position: absolute;
     top: 0;
-    right: -50%;
+    right: 0%;
     width: 60px;
     height: 16px;
     text-align: left;
@@ -982,6 +1002,43 @@ footer .footer-container div {
     footer .footer-container {
         flex-direction: column;
         margin-bottom: 150px;
+    }
+
+    .banner .container.serv {
+        padding: 0;
+        width: 95%;
+    }
+
+    .serv .presentation span {
+        font-size: 29px;
+    }
+
+    .banner .serv .presentation-1 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .banner .serv .presentation-2 {
+        font-size: 18px;
+        line-height: 1.4;
+        padding: 0 10px 10px;
+    }
+    .two-p p {
+        font-size: 20px;
+        height: 100%;
+        flex-grow: 1;
+    }
+    .two-p p:nth-child(1) {
+        background-color: #204188;
+    }
+
+    .two-p p:last-child {
+        background-color: transparent;
+    }
+    .services-list h2 {
+        margin-top: 10px;
+        font-size: 30px;
+        padding-bottom: 0;
     }
 }
 
