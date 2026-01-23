@@ -865,6 +865,11 @@ footer .address i {
     position: relative;
     font-family: "TeX Gyre Adventor", Arial, Helvetica, sans-serif;
     width: 150px;
+    transition: width .4s ease;
+}
+
+.card-explain .price.responsive {
+    width: 167px;
 }
 
 .card-explain .price::after {

@@ -64,14 +64,33 @@ items2.forEach(item => observer2.observe(item));
 document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('toggleCurrency');
     const btnText = btn.querySelector('span');
+    const priceContainers = document.querySelectorAll('.card-explain .price');
     const amounts = document.querySelectorAll('.amount');
     const symbols = document.querySelectorAll('.currency-symbol');
 
     let isEuro = true;
-    const exchangeRate = 1.75; // 1€ = 1.45 CAD
+    const exchangeRate = 1.75;
+    console.log();
+
 
     btn.addEventListener('click', () => {
         isEuro = !isEuro;
+
+        priceContainers.forEach(container => {
+            if (isEuro) {
+                container.classList.remove('responsive');
+            } else {
+                container.classList.add('responsive');
+            }
+        });
+
+        if (isEuro) {
+            document.querySelector('.price:nth-child(1) .currency-symbol').style.width="28px"
+            priceContainers[3].style.width = "147px"
+        } else {
+            document.querySelector('.price:nth-child(1) .currency-symbol').style.width="10px"
+            priceContainers[3].style.width = "166px"
+        }
 
         amounts.forEach(el => {
             const baseValue = parseFloat(el.getAttribute('data-base-price'));
