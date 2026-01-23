@@ -910,6 +910,36 @@ footer .address i {
     font-size: 17px;
 }
 
+.cont-1 .card-explain:nth-child(1) .content a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(241, 64, 33, 0.3);
+}
+
+.cont-1 .card-explain:nth-child(2) .content a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33, 92, 241, 0.3);
+}
+
+.cont-1 .card-explain:nth-child(3) .content a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(241, 231, 33, 0.3);
+}
+
+.cont-2 .card-explain:nth-child(1) .content a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(71, 241, 33, 0.3);
+}
+
+.cont-2 .card-explain:nth-child(2) .content a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(203, 33, 241, 0.3);
+}
+
+.cont-2 .card-explain:nth-child(3) .content a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 31, 50, 0.3);
+}
+
 /*========================== Media Queries (Mobile) ==============================*/
 @media (max-width: 768px) {
     #menu-icon {
