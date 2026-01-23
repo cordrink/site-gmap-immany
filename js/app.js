@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (isEuro) {
-            document.querySelector('.price:nth-child(1) .currency-symbol').style.width="28px"
+            document.querySelector('.price:nth-child(1) .currency-symbol').style.right="28px"
             priceContainers[3].style.width = "147px"
         } else {
-            document.querySelector('.price:nth-child(1) .currency-symbol').style.width="10px"
+            document.querySelector('.price:nth-child(1) .currency-symbol').style.right="10px"
             priceContainers[3].style.width = "166px"
         }
 
@@ -112,5 +112,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Mise à jour du texte du bouton
         btnText.innerText = isEuro ? 'CAD ($)' : 'Euro (€)';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+    console.log(navbar);
+    menuIcon.addEventListener('click', () => {
+        // Alterne la classe 'active' sur le parent <nav>
+        navbar.classList.toggle('active');
+
+        // Optionnel : Changer l'icône de menu en 'X' quand c'est ouvert
+        /*if (navbar.classList.contains('active')) {
+            menuIcon.classList.replace('bx-menu', 'bx-x');
+        } else {
+            menuIcon.classList.replace('bx-x', 'bx-menu');
+        }*/
     });
 });

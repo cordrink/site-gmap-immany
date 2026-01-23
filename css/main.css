@@ -912,6 +912,16 @@ footer .address i {
 
 /*========================== Media Queries (Mobile) ==============================*/
 @media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 200;
+    }
     nav {
         flex-direction: column;
         gap: 20px;
@@ -920,6 +930,9 @@ footer .address i {
         margin-top: 0;
         height: 50px; /* qui doit passer a 215px lorsqu'on deroule le menu */
     }
+    nav.active {
+        height: 215px;
+    }
     .logo {
         width: 100%;
         text-align: center;
@@ -927,11 +940,19 @@ footer .address i {
         position: relative;
         z-index: 99;
         background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .menu {
         width: 100%;
         position: relative;
         transform: translateY(-150%); /* qui doit passer a 0 lorsqu'on deroule le menu */
+        transition: transform .3s ease;
+
+    }
+    nav.active .menu {
+        transform: translateY(0);
     }
     .menu ul {
         flex-direction: column;
@@ -943,7 +964,7 @@ footer .address i {
         text-align: center;
     }
     .container .presentation span {
-        font-size: 28px;
+        font-size: 40px;
     }
     .container .presentation-img {
         display: none;
@@ -1111,6 +1132,12 @@ footer .address i {
         border-radius: 10px;
     }
 
+}
+
+@media (min-width: 769px) {
+    #menu-icon {
+        display: none;
+    }
 }
 
 /*========================== Animations ==============================*/
