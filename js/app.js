@@ -140,6 +140,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     const loader = document.getElementById('loaderIcon');
     const successMsg = document.getElementById('successMessage');
     const titleForm = document.querySelector('.form h2');
+    const formClass = document.querySelector('.form');
 
     // 2. État de chargement
     btn.disabled = true;
@@ -149,6 +150,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     // 3. Simulation du délai (2 secondes)
     setTimeout(() => {
         // Afficher le message de succès
+        formClass.classList.add('success');
         titleForm.style.display = "none";
         form.style.display = "none";
         successMsg.style.display = "block";
@@ -156,7 +158,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         // 4. Redirection finale après 1.5 seconde de succès
         setTimeout(() => {
             window.location.href = "./prices.html";
-        }, 2000);
+        }, 4000);
 
-    }, 3000);
+    }, 2000);
 });

@@ -516,6 +516,11 @@ footer .address i {
     height: 100%;
 }
 
+.form.success {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
 .form h2 {
     font-size: 28px;
     margin-bottom: 20px;
