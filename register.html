@@ -45,7 +45,7 @@
         </div>
         <div class="form">
             <h2>Enregistrez votre entreprise</h2>
-            <form action="prices.html" method="GET">
+            <form id="registrationForm" action="prices.html" method="GET">
                 <div class="form-group">
                     <label for="name">Nom de l'entreprise</label>
                     <input type="text" id="name" name="name" required>
@@ -66,8 +66,15 @@
                     <label for="phone">Téléphone</label>
                     <input type="text" id="phone" name="phone" required>
                 </div>
-                <button>Enrôlement</button>
+                <button type="submit" id="submitBtn">
+                    <span id="btnText">Enrôlement</span>
+                    <i class='bx bx-loader-circle' id="loaderIcon" style="display: none;"></i>
+                </button>
             </form>
+            <!-- Conteneur pour le message de succès (à placer juste après le formulaire) -->
+            <div id="successMessage" style="display: none; color: #28a745; margin-top: 15px; font-weight: bold; text-align: center;font-size: 28px">
+                <i class='bx bx-check-circle'></i> Vos informations ont été reçues ! Redirection en cours...
+            </div>
         </div>
     </div>
 </section>

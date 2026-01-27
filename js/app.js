@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isEuro = true;
     const exchangeRate = 1.75;
-    console.log();
 
 
     btn.addEventListener('click', () => {
@@ -118,16 +117,46 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
     const navbar = document.getElementById('navbar');
-    console.log(navbar);
     menuIcon.addEventListener('click', () => {
         // Alterne la classe 'active' sur le parent <nav>
         navbar.classList.toggle('active');
 
         // Optionnel : Changer l'icône de menu en 'X' quand c'est ouvert
-        /*if (navbar.classList.contains('active')) {
+        if (navbar.classList.contains('active')) {
             menuIcon.classList.replace('bx-menu', 'bx-x');
         } else {
             menuIcon.classList.replace('bx-x', 'bx-menu');
-        }*/
+        }
     });
+});
+
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    // 1. Empêcher l'envoi immédiat
+    e.preventDefault();
+
+    const form = this;
+    const btn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const loader = document.getElementById('loaderIcon');
+    const successMsg = document.getElementById('successMessage');
+    const titleForm = document.querySelector('.form h2');
+
+    // 2. État de chargement
+    btn.disabled = true;
+    btnText.textContent = "Chargement...";
+    loader.style.display = "inline-block";
+
+    // 3. Simulation du délai (2 secondes)
+    setTimeout(() => {
+        // Afficher le message de succès
+        titleForm.style.display = "none";
+        form.style.display = "none";
+        successMsg.style.display = "block";
+
+        // 4. Redirection finale après 1.5 seconde de succès
+        setTimeout(() => {
+            window.location.href = "./prices.html";
+        }, 2000);
+
+    }, 3000);
 });
