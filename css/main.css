@@ -7,6 +7,20 @@
     font-display: swap;
 }
 
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background-color: white;
+    transition: all .3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav.scrolled {
+    border-bottom: 3px solid #2195f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -426,7 +440,7 @@ footer .footer-container div {
     margin: 15px 0;
 }
 
-.footer-container div a {
+.footer-container div:nth-child(1) a {
     background: #2195f1;
     color: white;
     padding: 10px 20px;
@@ -437,6 +451,35 @@ footer .footer-container div {
     font-size: 16px;
 }
 
+.footer-container div:nth-child(4) p {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container div:nth-child(4) a {
+    color: #f1f1f1;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: color .2s ease-in-out;
+}
+
+.footer-container div:nth-child(4) a:hover {
+    color: #2195f1;
+}
+
+.footer-container div:nth-child(4) a::before {
+    content: url('../asset/svg/hand-rignt.svg');
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    vertical-align: middle;
+    position: absolute;
+    top: 40%;
+    left: -32px;
+    transform: translateY(-50%);
+}
 
 .footer-container div p {
     line-height: 2;
@@ -736,6 +779,46 @@ footer .address i {
 .btn-currency i {
     font-size: 20px;
 }
+
+/*========================== Policy Mention Condition page ==============================*/
+main {
+    width: 90vw;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #204188;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+main h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+main>div {
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.3;
+}
+
 
 /* Ajustement pour que le symbole ne casse pas le design existant */
 .currency-symbol {

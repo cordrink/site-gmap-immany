@@ -1,3 +1,15 @@
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.nav');
+
+    console.log('scrolled', navbar);
+
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+})
+
 // Observer les éléments pour les animer quand ils entrent dans le viewport
 const items = document.querySelectorAll('.animate-item');
 
@@ -162,3 +174,5 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
     }, 2000);
 });
+
+
