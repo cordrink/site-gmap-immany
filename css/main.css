@@ -468,19 +468,6 @@ footer .footer-container div {
     color: #2195f1;
 }
 
-.footer-container div:nth-child(4) a::before {
-    content: url('../asset/svg/hand-rignt.svg');
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin-left: 5px;
-    vertical-align: middle;
-    position: absolute;
-    top: 40%;
-    left: -32px;
-    transform: translateY(-50%);
-}
-
 .footer-container div p {
     line-height: 2;
     font-size: 16px;
