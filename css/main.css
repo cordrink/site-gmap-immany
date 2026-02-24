@@ -451,6 +451,17 @@ footer .footer-container div {
     font-size: 16px;
 }
 
+.footer-container div:nth-child(3) a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: color .2s ease-in-out;
+}
+
+.footer-container div:nth-child(3) a:hover {
+    color: #2195f1;
+}
+
 .footer-container div:nth-child(4) p {
     display: flex;
     flex-direction: column;
@@ -696,7 +707,7 @@ footer .address i {
 }
 
 .service-container {
-    display: grid; /* Utilisation de Grid pour plus de stabilité */
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     width: 75%;
