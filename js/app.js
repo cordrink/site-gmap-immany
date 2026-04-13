@@ -1,8 +1,6 @@
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.nav');
 
-    console.log('scrolled', navbar);
-
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
@@ -159,15 +157,13 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     btnText.textContent = "Chargement...";
     loader.style.display = "inline-block";
 
-    // 3. Simulation du délai (2 secondes)
     setTimeout(() => {
-        // Afficher le message de succès
         formClass.classList.add('success');
         titleForm.style.display = "none";
         form.style.display = "none";
         successMsg.style.display = "block";
 
-        // 4. Redirection finale après 1.5 seconde de succès
+
         setTimeout(() => {
             window.location.href = "./prices.html";
         }, 4000);
